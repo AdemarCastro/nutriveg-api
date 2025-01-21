@@ -20,8 +20,8 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     List<Product> findByIsVegetarianTrue();
 
     // Busca produtos por categoria
-    List<Product> findByCategoryNameIgnoreCase(String categoryName);
+    List<Product> findByFoodCategoryName(String foodCategoryName);
 
     // Busca produto especifico por nome e categoria
-    Optional<Product> findByNameAndCategoryName(String name, String categoryName);
+    Optional<Product> findByNameAndFoodCategoryName(String name, String foodCategoryName);
 }
